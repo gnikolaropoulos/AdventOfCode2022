@@ -14,7 +14,7 @@ def solve_part_1(input):
         compartment_len = int(len(line)/2)
         first_compartment = line[:compartment_len]
         second_compartment = line[compartment_len:]
-        common_items = set(list(first_compartment)).intersection(set(list(second_compartment)))
+        common_items = set(first_compartment).intersection(set(second_compartment))
         for item in common_items:
             priority += lettersToPriority.get(item)
     return priority
@@ -24,7 +24,7 @@ def solve_part_2(input):
     i = 0
     priority = 0
     while i < len(input):
-        common_items = set(list(input[i])).intersection(set(list(input[i + 1])).intersection(set(list(input[i + 2]))))
+        common_items = set(input[i]).intersection(set(input[i + 1]).intersection(set(input[i + 2])))
         i += 3
         for item in common_items:
             priority += lettersToPriority.get(item)

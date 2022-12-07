@@ -14,7 +14,7 @@ def solve_part_1(input):
     for line in input:
         player1 = line.split(" ")[0]
         player2 = line.split(" ")[1]
-        score += part1_combined_scores[lettersToIndeces.get(player1)][lettersToIndeces.get(player2)]
+        score += part1_combined_scores[lettersToIndices.get(player1)][lettersToIndices.get(player2)]
     return score
 
 
@@ -23,7 +23,7 @@ def solve_part_2(input):
     for line in input:
         player1 = line.split(" ")[0]
         player2 = line.split(" ")[1]
-        score += part2_combined_scores[lettersToIndeces.get(player1)][lettersToIndeces.get(player2)]
+        score += part2_combined_scores[lettersToIndices.get(player1)][lettersToIndices.get(player2)]
     return score
 
 
