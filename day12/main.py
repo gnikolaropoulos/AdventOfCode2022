@@ -22,11 +22,11 @@ def bfs(grid, start, end):
     return float("inf")
 
 
-def solve_part_1(puzzle_input):
+def solve_part_1(input):
     return bfs(puzzle_input[0], puzzle_input[1], puzzle_input[2])
 
 
-def solve_part_2(puzzle_input):
+def solve_part_2(input):
     grid, start, end, locations_of_a = puzzle_input
     distances_of_a = [bfs(grid, a, end) for a in locations_of_a]
     return min(distances_of_a)
